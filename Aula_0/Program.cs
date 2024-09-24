@@ -10,6 +10,9 @@ namespace Aula_0
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello world! Changed by git");
+
+            Console.ReadKey();
         }
     }
 }
