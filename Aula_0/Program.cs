@@ -12,7 +12,7 @@ namespace Aula_0
         {
             Console.WriteLine("Hello world! Changed by git.");
             Console.WriteLine("Double hello world! Changed by git.");
-
+            Console.WriteLine("Triple hello world! Changed by git.");
             Console.ReadKey();
         }
     }
