@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.34031.82
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula_0", "Aula_0\Aula_0.csproj", "{633038CC-F706-4A6F-8F35-EC7480A3D140}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula_1_Basico", "Aula_0\Aula_1_Basico.csproj", "{633038CC-F706-4A6F-8F35-EC7480A3D140}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aulas", "Aulas", "{37356360-FD88-4ACD-B733-9A225C76DA80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{633038CC-F706-4A6F-8F35-EC7480A3D140} = {37356360-FD88-4ACD-B733-9A225C76DA80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {216FBD1C-4925-4CA7-8D5D-A32DCAEF010B}
