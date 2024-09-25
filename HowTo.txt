@@ -1,0 +1,6 @@
+Carregar material do Repositório
+
+
+1) git remote add origin https://github.com/luferIPCA/LEIM_POO_2122.git
+2) git fetch
+3) git pull
