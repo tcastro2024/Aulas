@@ -4,13 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aula_2___Basico_v3
+namespace Aula_2___Basico
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            Student.name = "Alex";
+            Student.average = 15.5;
 
+            Console.WriteLine("Average: {0}", Student.average );
+            Console.WriteLine("Course: {0}", Student.GetCourse());
+
+            Console.ReadKey();
         }
     }
 }
