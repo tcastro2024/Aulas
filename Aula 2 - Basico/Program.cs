@@ -15,6 +15,7 @@ namespace Aula_2___Basico
 
             Console.WriteLine("Average: {0}", Student.average );
             Console.WriteLine("Course: {0}", Student.GetCourse());
+            Console.WriteLine("Name:  {0}", Student.name);
 
             Console.ReadKey();
         }
