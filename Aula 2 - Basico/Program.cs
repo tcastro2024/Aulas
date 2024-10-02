@@ -1,4 +1,16 @@
-﻿using System;
+﻿//-----------------------------------------------------------------
+//    <copyright file="Aula_1.cs"    company="IPCA">
+//     Copyright (c) IPCA-EST 2024. All rights reserved.
+//    </copyright>
+//    <date>2024-09-26</date>
+//    <time>16:01</time>
+//    <version>0.1</version>
+//    <author>tcastro</author>
+//    <description></description>
+//-----------------------------------------------------------------
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +22,22 @@ namespace Aula_2___Basico
     {
         static void Main(string[] args)
         {
-            Student.name = "Alex";
-            Student.average = 15.5;
+            //One line of coment
 
-            Console.WriteLine("Average: {0}", Student.average );
-            Console.WriteLine("Course: {0}", Student.GetCourse());
-            Console.WriteLine("Name:  {0}", Student.name);
+            /*
+             * 
+             * 
+             * 
+             
+            
+            Coment1
+            Coment2
+            */
 
+            Console.WriteLine("Aula 2");
+
+    
+           
             Console.ReadKey();
         }
     }
