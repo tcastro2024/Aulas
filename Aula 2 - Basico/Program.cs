@@ -52,19 +52,6 @@ namespace Aula_2___Basico
 
             Console.WriteLine("NF: " + Math.Round(average, 2));
 
-            while (true)
-            {
-                Console.Write(' ');
-            }
-
-
-    
-
-                
-
-
-
-
             Console.ReadKey();
         }
     }
