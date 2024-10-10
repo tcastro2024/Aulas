@@ -15,11 +15,10 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using CalcDLL; //Utilizar dll criada manualmente
-using Usa_DLL_Aula3; //Utilizar dll criada manualmente
-//using System.Globalization;
-using System.Globalization;
-using Areas;
+//using CalcDLL; //Utilizar dll criada manualmente FORA DO PROJETO
+using Usa_DLL_Aula3; //Utilizar dll criada manualmente DENTRO DO PROJETO
+using System.Globalization; 
+using Areas; //Utilizar dll criada manualmente DENTRO DO PROJETO
 
 
 namespace Aula_3___Fundamentos
