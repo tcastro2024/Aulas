@@ -28,6 +28,7 @@ namespace Aula_4___Classes
     {
         #region Attributes
         const int N = 10;
+        const int Meses = 12;
         string nome;
         int idade;
 
@@ -76,6 +77,11 @@ namespace Aula_4___Classes
             this.idade = idade;
             premios = new int[totPremios];
             totObjetos++;
+        }
+
+        public Pessoa(string nomeParametro)
+        {
+            this.nome = nomeParametro;
         }
 
         //ou
@@ -137,6 +143,29 @@ namespace Aula_4___Classes
         #region OtherMethods
 
         #region A_LA_JAVA
+
+        private void IsNotEmptyName(string nomeParametro)
+        {
+            if (nomeParametro.Length > 0)
+                this.nome = nomeParametro;
+            else
+                this.nome = "";
+        }
+
+        public void SetNome(string nomeParametro)
+        {
+            IsNotEmptyName(nomeParametro);
+        }
+
+
+
+
+
+        public string GetNome()
+        {
+            return this.nome;
+        }
+
         public bool SetIdade(int x)
         {
             idade = x;

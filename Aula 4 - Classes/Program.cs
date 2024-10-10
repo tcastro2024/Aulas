@@ -35,18 +35,25 @@ namespace Aula_4___Classes
             #endregion
 
             Pessoa p = new Pessoa();    //cria objeto
-            Console.WriteLine($"Nome: {p.Nome} - Idade: {p.Idade}");
+            //Console.WriteLine($"Nome: {p.Nome} - Idade: {p.Idade}");
 
-            p.Idade = 23;               //set Idade
-            p.Nome = "Tiago";           //set Nome
-            Console.WriteLine("Nome:" + p.Nome + " Idade: " + p.Idade);    //get
+            //p.Idade = 23;               //set Idade
+            //p.Nome = "Tiago";           //set Nome
+            //Console.WriteLine("Nome:" + p.Nome + " Idade: " + p.Idade);    //get
 
-            Pessoa r = new Pessoa("João", 12);
-            Console.WriteLine($"Nome: {r.Nome} - Idade: {r.Idade}");
+            //Pessoa r = new Pessoa("João", 12);
+            //Console.WriteLine($"Nome: {r.Nome} - Idade: {r.Idade}");
+
+            p.SetNome("Rita Castro");
+
+            Pessoa p1 = new Pessoa("Maria Rodrigues");
+
+            Console.Write("\nNome: {0}", p.GetNome() );
+            Console.Write("\nNome: {0}", p1.GetNome() );
 
             //bool aux = r.ExistePremio(230);
 
-            Console.WriteLine("Tot: " + Pessoa.TotObjetos.ToString());
+           // Console.WriteLine("Tot: " + Pessoa.TotObjetos.ToString());
 
             Console.ReadKey();
         }

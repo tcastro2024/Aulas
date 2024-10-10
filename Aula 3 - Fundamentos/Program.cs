@@ -28,15 +28,15 @@ namespace Aula_3___Fundamentos
     /// </summary>
     internal class Program
     {
-
-        #region ZonaDeTeste
+       
         static void Main(string[] args)
         {
-            AreasGeometricas    areas = new AreasGeometricas();
+            #region ZonaDeTeste
+            AreasGeometricas areas = new AreasGeometricas();
 
             int incrementa = 4;
             int incrementaSegundoParametro = 8;
-            Pessoa pessoa = new Pessoa();
+            Pessoa pessoa = new Pessoa("Teste");
 
             //Objeto pessoa da classe Pessoa
             pessoa.SomaDoisValores(incrementa, incrementaSegundoParametro);
@@ -45,7 +45,7 @@ namespace Aula_3___Fundamentos
             Pessoa.SomaDoisValoresEstatico(incrementa, incrementaSegundoParametro);
 
 
-            
+
             //Calculadora calculadora = new Calculadora();
 
             //Console.Write(calculadora.SomaDoisValores(4, 8));
@@ -192,10 +192,28 @@ namespace Aula_3___Fundamentos
 
             // */
 
+            #endregion
 
+            #region Teste da classe Funcionario
+
+            Funcionario funcionario = new Funcionario();
+            funcionario.nome = "Tiago";
+            funcionario.idade = 40;
+            
+            Console.Write("\n1º Exemplo, Nome: {0}, Idade: {1}", funcionario.nome, funcionario.idade);
+
+            Funcionario funcionario1 = new Funcionario("Paulo", 45, 900.6);
+
+            Console.Write("\n1º Exemplo, Nome: {0}, Idade: {1} e Salário: {2}", funcionario1.nome, funcionario1.idade, funcionario1.salario);
+
+            #endregion
 
             Console.ReadKey();
         }
-        #endregion
+        
+
+
+
+        
     }
 }
