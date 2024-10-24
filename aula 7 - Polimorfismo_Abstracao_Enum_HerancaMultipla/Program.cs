@@ -10,6 +10,7 @@
 //-----------------------------------------------------------------
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,14 +37,11 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
             ////estudanteLEIM._idAluno =  "a12345";
             ////estudanteLEIM.SetIdAluno( "a12345");
 
-
-
-
             ////Classes, Herança, Interface , Encapsulamento e propriedades
 
             ////Polimorfismo_Abstracao_Enum_HerancaMultipla
 
-            //#region Polimorfismo sem override
+            #region Polimorfismo sem override
 
             //AnimalAbstrato animalAbstrato = new AnimalAbstrato();
 
@@ -58,18 +56,18 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
             ////girafa.Tipo(); 
             ////leao.Tipo();
 
-            //#endregion
+            #endregion
 
-            //#region Polimorfismo com override
+            #region Polimorfismo com override
 
             //animal.TipoOverride();
             //cao.TipoOverride();
             //girafa.TipoOverride();
             //leao.TipoOverride();
 
-            //#endregion
+            #endregion
 
-            ////#region enums
+            #region enums
             ////Console.Write( leao.ToString() );
             ////#endregion
 
@@ -77,17 +75,15 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
             ////// arrays, collections, operadores e exceções
 
             ////#region Arrays
-            //int[] contaAnimais;
-            //double[] comprimentoDeAnimais = { 1, 2, 0.5 };
-            //string[] nomes = { "Andre", "João", "Maria" };
-            //double[] notas = new double[4];
+            int[] contaAnimais;
+            double[] comprimentoDeAnimais = { 1, 2, 0.5 };
+            string[] nomes = { "Andre", "João", "Maria" };
+            double[] notas = new double[4];
 
-            //Array<int> arrayListPessoa = new System.Array<int>();
+            Console.WriteLine();
+            #endregion
 
-            //Console.WriteLine();
-            //#endregion
-
-            //#region Exceções
+            #region Exceções
 
             //try catch
             //try
@@ -117,18 +113,84 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
             //}
 
             ////throw
-            int x = 20, y = 0, res;
+            //int x = 20, y = 0, res;
 
-            try
+            //try
+            //{
+            //    res = x / y;
+            //}
+            //catch (DivideByZeroException e)
+            //{
+            //    throw new Exception("Nem penses dividir por Zero..." + e.Message);
+            //}
+
+            #endregion
+
+            Pessoa pessoa = new Pessoa("Pedro", 25);
+            Pessoa pessoa1 = new Pessoa(12325);
+
+   
+
+            Console.WriteLine(pessoa.Nome);
+            Console.WriteLine(pessoa.Idade);
+            Console.WriteLine(pessoa1.Id);
+
+
+            ArrayList arrayListPessoa = new ArrayList();
+            // A LA JAVA ArrayList<Pessoa> arrayListPessoa = new ArrayList<Pessoa>();
+
+
+            #region Logica
+            const int qtdMaxUtilizador = 2;
+
+            //for (int i = 0; i < qtdMaxUtilizador; i++)
+            //{
+
+            //}
+
+            int id = 0, contador = 0;
+            int idade;
+            string nome, nacionalidade;
+
+            //id = 1234
+            //contador = 21
+            //qtdMaxUtilizador 20
+            // 21 <= 20
+
+            while (id != -1 && contador <= qtdMaxUtilizador)
             {
-                res = x / y;
-            }
-            catch (DivideByZeroException e)
-            {
-                throw new Exception("Nem penses dividir por Zero..." + e.Message);
+                Console.Write("\nId (ou -1 para terminar o programa): ");
+                id = int.Parse(Console.ReadLine());
+
+                if (id == -1) //id = 1589 
+                    break;
+
+                Console.Write("\nNome: "); //Maria
+                nome = Console.ReadLine();
+
+                Console.Write("\nIdade: "); // 34
+                idade = int.Parse(Console.ReadLine());
+
+                Console.Write("\nNscionlidade: ");
+                nacionalidade = Console.ReadLine();
+
+                arrayListPessoa.Add(new Pessoa(id, nome, idade, nacionalidade)); //
+
+                contador++;
             }
 
-            //#endregion
+            #endregion
+
+            //Pessoa alunosLeim = new Pessoa(123);
+
+            //alunosLeim.
+
+            foreach (Pessoa alunosLeim in arrayListPessoa)
+            {
+                Console.WriteLine(alunosLeim.ToString());
+            }
+
+            //arrayListPessoa.Add(new Pessoa("Tiago", 24));
 
             Console.ReadKey();
         }
