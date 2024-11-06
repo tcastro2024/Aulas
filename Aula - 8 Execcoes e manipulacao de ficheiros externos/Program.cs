@@ -126,10 +126,47 @@ namespace Aula___8_Execcoes_e_manipulacao_de_ficheiros_externos
 
             #endregion
 
+            #region Escrever Ficheiro
+
+            string path = @"c:\temp\Benfica\Benfica1.txt";
+
+            try
+            {
+                // Verifica se o diretório existe e cria se não existir
+                string directory = Path.GetDirectoryName(path);
+                if (!Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+
+                // Usa StreamWriter para abrir ou criar o ficheiro e escrever conteúdo e esmagar o existente
+                //using (StreamWriter sw = new StreamWriter(path))
+
+                // Usa StreamWriter para abrir o ficheiro em modo de append (acrescentar)
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
+                    sw.WriteLine("Linha 1: Este é o conteúdo da primeira linha.");
+                    sw.WriteLine("Linha 2: Aqui vai a segunda linha.");
+                    sw.WriteLine("Linha 3: E esta é a terceira linha.");
+                }
+
+                Console.WriteLine("O ficheiro foi escrito com sucesso.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocorreu um erro ao escrever o ficheiro: {ex.Message}");
+            }
+            finally
+            {
+                Console.WriteLine("Acabou de escrever");
+            }
+
+            #endregion
+
 
             #region Ler Ficheiro 
 
-            string path = @"c:\temp\Benfica\Benfica1.txt";
+            //path = @"c:\temp\Benfica\Benfica1.txt";
 
             if (File.Exists(path))
             {

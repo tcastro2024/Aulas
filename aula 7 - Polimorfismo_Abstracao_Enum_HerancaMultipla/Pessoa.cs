@@ -31,6 +31,8 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
         int id;
         string nome;
 
+        Cao cao;
+
         #endregion
 
 
@@ -64,6 +66,12 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
             this.Id = id;
         }
 
+        public Pessoa(int id, Cao cao)
+        {
+            this.Id = id;
+            this.Cao = cao; 
+        }
+
         #endregion
 
         public int Id
@@ -75,6 +83,18 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
             set
             {
                 this.id = value;
+            }
+        }
+
+        public Cao Cao
+        {
+            get
+            {
+                return cao;
+            }
+            set
+            {
+                this.cao = value;
             }
         }
 
