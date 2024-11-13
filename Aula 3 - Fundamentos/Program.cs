@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-//using CalcDLL; //Utilizar dll criada manualmente FORA DO PROJETO
+using CalcDLL; //Utilizar dll criada manualmente FORA DO PROJETO
 using Usa_DLL_Aula3; //Utilizar dll criada manualmente DENTRO DO PROJETO
 using System.Globalization; 
 using Areas; //Utilizar dll criada manualmente DENTRO DO PROJETO
@@ -207,6 +207,13 @@ namespace Aula_3___Fundamentos
             Console.Write("\n1º Exemplo, Nome: {0}, Idade: {1} e Salário: {2}", funcionario1.nome, funcionario1.idade, funcionario1.salario);
 
             #endregion
+
+            //Calc.Soma
+
+            Calc calc = new Calc();
+
+            calc.Soma(2, 4);
+
 
             Console.ReadKey();
         }

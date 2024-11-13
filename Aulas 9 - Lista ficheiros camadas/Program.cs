@@ -32,6 +32,9 @@ namespace Aulas_9___Lista_ficheiros_camadas
             Console.WriteLine("Salário Bruto: " + funcionario.SalarioBruto);
             Console.WriteLine("Imposto: " + funcionario.Imposto);
 
+            List<int> lista = new List<int>();
+            
+
             Console.WriteLine("Funcionario: " + funcionario.Nome + ", " + funcionario.SalarioLiquido());
 
             Console.WriteLine("Percentagem do aumento de salário: ");
