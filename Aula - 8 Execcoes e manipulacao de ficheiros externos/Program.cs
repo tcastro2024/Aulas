@@ -128,8 +128,12 @@ namespace Aula___8_Execcoes_e_manipulacao_de_ficheiros_externos
 
             #region Escrever Ficheiro
 
-            string path = @"c:\temp\Benfica\Benfica1.txt";
+            //Opcionalmente concatenar o nome do ficheiro com um ID explorar o Randow
+            //colocar a extensão
+            string path = @"c:\temp\Logs1\Log_123.txt";
 
+
+            //Aplicar num tratamento de erro - TODO == por fazer
             try
             {
                 // Verifica se o diretório existe e cria se não existir
@@ -148,6 +152,8 @@ namespace Aula___8_Execcoes_e_manipulacao_de_ficheiros_externos
                     sw.WriteLine("Linha 1: Este é o conteúdo da primeira linha.");
                     sw.WriteLine("Linha 2: Aqui vai a segunda linha.");
                     sw.WriteLine("Linha 3: E esta é a terceira linha.");
+                    sw.WriteLine("Exception Invalid Number ...");
+                    sw.WriteLine("Exception 2: Invalid Number ...");
                 }
 
                 Console.WriteLine("O ficheiro foi escrito com sucesso.");
