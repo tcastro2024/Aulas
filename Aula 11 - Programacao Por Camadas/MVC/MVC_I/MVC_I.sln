@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_I", "MVC_I.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GereCarrosNTier", "..\..\NTier\GereCarrosNTier\GereCarrosNTier.csproj", "{6B1C3042-8991-498C-A7D2-EE33AAB6536C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Single Responsibility Principle", "..\..\..\Aula 12 - SOLID\Single Responsibility Principle\Single Responsibility Principle.csproj", "{42D3CDC8-AF9F-4C93-994C-BF0BCC546579}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6B1C3042-8991-498C-A7D2-EE33AAB6536C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B1C3042-8991-498C-A7D2-EE33AAB6536C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B1C3042-8991-498C-A7D2-EE33AAB6536C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D3CDC8-AF9F-4C93-994C-BF0BCC546579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D3CDC8-AF9F-4C93-994C-BF0BCC546579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D3CDC8-AF9F-4C93-994C-BF0BCC546579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D3CDC8-AF9F-4C93-994C-BF0BCC546579}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -23,7 +23,7 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    class Animal
+    class Animal: AnimalAbstrato, IAnimal
     {
         #region PolimorfismoSemOverride
         public void Tipo()
@@ -38,6 +38,22 @@ namespace aula_7___Polimorfismo_Abstracao_Enum_HerancaMultipla
         {
             Console.WriteLine("Animal têm um tipo.");
         }
+
+        public override void Mover() //abstrato
+        {
+            Console.WriteLine("Voar");
+        }
+
+        public void GetTipoAnimal()
+        {
+
+        }
+        public void GetTipoHabitat()
+        {
+
+        }
         #endregion
+
+
     }
 }
