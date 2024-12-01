@@ -17,17 +17,49 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
         static void Main(string[] args)
         {
             /*
-       A sintaxe de uma expressão lambda é: (parameters) => expression
+               A sintaxe de uma expressão lambda é: (parameters) => expression
 
-       parameters: Os parâmetros de entrada(podem ser omitidos se não houver).
-       =>: O operador "lambda" (lê-se "vai para").
-       expression: O corpo do lambda(pode ser uma única expressão ou um bloco de código).
-       */
+               parameters: Os parâmetros de entrada(podem ser omitidos se não houver).
+               =>: O operador "lambda" (lê-se "vai para").
+               expression: O corpo do lambda(pode ser uma única expressão
+                ou um bloco de código).
+           */
+
+            /*
+                A variável fator é capturada e usada dentro da expressão lambda.
+                Tipos Comuns de Delegados
+                Func<T, TResult> ou Func<input,output>
+                Representa uma função que aceita parâmetros(T) e retorna um valor(TResult).
+                //Exemplo:Func<int, int> dobrar = x => x * 2;
+
+                Action<T>
+                //Representa um método que aceita parâmetros(T) mas não retorna nada.
+
+                //Exemplo: Action<string> imprimir = mensagem => Console.WriteLine(mensagem);
+            
+                Predicate<T>
+                //Representa um método que aceita um parâmetro(T) e retorna bool.
+                //Exemplo: Predicate<int> ehPar = x => x % 2 == 0;          
+            
+                Vantagens de Usar Lambdas:
+                Código conciso: Reduz a necessidade de escrever métodos explícitos.
+                Facilidade em LINQ: Muito utilizado para consultas em coleções.
+                Legibilidade: Em cenários simples, facilita a leitura
+                              e compreensão do código.
+            
+                Restrições:
+                Não é possível usar lambdas para métodos genéricos diretamente.
+                Não pode conter uma declaração explícita de return 
+                a menos que use blocos({ }).
+            */
+
             //1. Lambda que retorna a soma de dois números
             Func<int, int, int> somar = (a, b) => a + b;
             Console.WriteLine(somar(3, 4)); // Saída: 7
             /*
-            Func<int, int, int>: Representa uma função que aceita dois int e retorna um int.
+            Func<in, in, out>  
+            Func<int, int, int>: Representa uma função que aceita dois int 
+            e retorna um int.
             (a, b): Parâmetros da lambda.
             a + b: Corpo que retorna a soma.
             */
@@ -42,7 +74,7 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
             */
 
             //3.Lambda com um parâmetro
-
+            // Func<input,output>
             Func<int, int> dobrar = x => x * 2;
             Console.WriteLine(dobrar(5)); // Saída: 10
             /*
@@ -51,64 +83,43 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
             Se o corpo da expressão contém múltiplas linhas, você pode usar um bloco { }:
             */
 
-4.Lambda com bloco de código
-csharp
-Copy code
-Func<int, int, int> calcular = (a, b) =>
-{
-    int soma = a + b;
-    int produto = a * b;
-    return soma + produto;
-};
+            // 4.Lambda com bloco de código
+            // Func<in, in, out>
+            Func<int, int, int> calcular = (a, b) =>
+            {
+                int soma = a + b;
+                int produto = a * b;
+                return soma + produto;
+            };
 
             Console.WriteLine(calcular(2, 3)); // Saída: 11
-            Aqui, usamos um bloco para executar várias operações antes de retornar um valor.
-Uso em Coleções
-5.Usando Where para filtrar uma lista
-csharp
-Copy code
-List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6 };
+           
+            /*
+            Aqui, usamos um bloco para executar várias operações antes
+            de retornar um valor.
+            Uso em Coleções
+            5.Usando Where para filtrar uma lista
+            */
+            List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6 };
             var numerosPares = numeros.Where(n => n % 2 == 0).ToList();
             Console.WriteLine(string.Join(", ", numerosPares)); // Saída: 2, 4, 6
-            n => n % 2 == 0: Filtra os números pares.
-6.Usando Select para transformar uma lista
-csharp
-Copy code
-List<int> numeros = new List<int> { 1, 2, 3 };
-            var quadrados = numeros.Select(n => n * n).ToList();
+            //n => n % 2 == 0 Filtra os números pares.
+            
+            //6.Usando Select para transformar uma lista
+            List<int> numeros2 = new List<int> { 1, 2, 3 };
+            var quadrados = numeros2.Select(n => n * n).ToList();
             Console.WriteLine(string.Join(", ", quadrados)); // Saída: 1, 4, 9
-            n => n * n: Transforma cada número em seu quadrado.
-Capturando Variáveis Externas
-Uma expressão lambda pode acessar variáveis definidas fora de seu escopo:
+            //n => n * n Transforma cada número em seu quadrado.
 
-7.Capturando variável externa
-csharp
-Copy code
-int fator = 3;
+            //Capturando Variáveis Externas
+            //Uma expressão lambda pode acessar variáveis definidas
+            //fora de seu escopo
+            //7.Capturando variável externa
+            int fator = 3;
             Func<int, int> multiplicar = x => x * fator;
             Console.WriteLine(multiplicar(5)); // Saída: 15
-            A variável fator é capturada e usada dentro da expressão lambda.
-Tipos Comuns de Delegados
-Func<T, TResult>
-Representa uma função que aceita parâmetros(T) e retorna um valor(TResult).
 
-Exemplo: Func<int, int> dobrar = x => x * 2;
-            Action<T>
-            Representa um método que aceita parâmetros(T) mas não retorna nada.
-
-        Exemplo: Action<string> imprimir = mensagem => Console.WriteLine(mensagem);
-            Predicate<T>
-            Representa um método que aceita um parâmetro(T) e retorna bool.
-
-    Exemplo: Predicate<int> ehPar = x => x % 2 == 0;
-            Vantagens de Usar Lambdas
-Código conciso: Reduz a necessidade de escrever métodos explícitos.
-Facilidade em LINQ: Muito utilizado para consultas em coleções.
-Legibilidade: Em cenários simples, facilita a leitura e compreensão do código.
-Restrições
-Não é possível usar lambdas para métodos genéricos diretamente.
-Não pode conter uma declaração explícita de return a menos que use blocos({ }).
-
+            
 
             #region Outros Exemplos
 
@@ -120,8 +131,8 @@ Não pode conter uma declaração explícita de return a menos que use blocos({ 
 
             Func<double, double> cube = x => x * x * x;
 
-            string message1 = "O Benfica é o maior...";
-            string message2 = "O Portinho é quase....";
+            string message1 = "O Braga é o maior...";
+            string message2 = "O Porto é quase....";
             //Action<string, string> concat;
             Action<string, string> concat = new Action<string, string>(WriteToConsole);
             //ou
@@ -310,6 +321,11 @@ Não pode conter uma declaração explícita de return a menos que use blocos({ 
 
             #endregion
 
+
+            //Start without debug
+            //ou
+            Console.ReadKey();
+
         }
 
         /// <summary>
@@ -321,6 +337,5 @@ Não pode conter uma declaração explícita de return a menos que use blocos({ 
         {
             Console.WriteLine("{0}\n{1}", string1, string2);
         }
-
     }
 }
