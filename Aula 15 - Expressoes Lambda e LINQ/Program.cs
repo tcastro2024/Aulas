@@ -55,7 +55,9 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
 
             //1. Lambda que retorna a soma de dois números
             Func<int, int, int> somar = (a, b) => a + b;
-            Console.WriteLine(somar(3, 4)); // Saída: 7
+            Console.WriteLine(somar(5, 5)); // Saída: 10
+
+
             /*
             Func<in, in, out>  
             Func<int, int, int>: Representa uma função que aceita dois int 
@@ -66,8 +68,8 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
 
             //2.Lambda sem parâmetros
 
-            Action dizerOi = () => Console.WriteLine("Olá, mundo!");
-                        dizerOi(); // Saída: Olá, mundo!
+            Action dizerOla = () => Console.WriteLine("Olá, mundo!");
+            dizerOla(); // Saída: Olá, mundo!
             /*
                 Action: Representa um método que não retorna nada(void).
                 (): Sem parâmetros.
@@ -93,7 +95,7 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
             };
 
             Console.WriteLine(calcular(2, 3)); // Saída: 11
-           
+
             /*
             Aqui, usamos um bloco para executar várias operações antes
             de retornar um valor.
@@ -103,8 +105,8 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
             List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6 };
             var numerosPares = numeros.Where(n => n % 2 == 0).ToList();
             Console.WriteLine(string.Join(", ", numerosPares)); // Saída: 2, 4, 6
-            //n => n % 2 == 0 Filtra os números pares.
-            
+                                                                //n => n % 2 == 0 Filtra os números pares.
+
             //6.Usando Select para transformar uma lista
             List<int> numeros2 = new List<int> { 1, 2, 3 };
             var quadrados = numeros2.Select(n => n * n).ToList();
@@ -119,7 +121,7 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
             Func<int, int> multiplicar = x => x * fator;
             Console.WriteLine(multiplicar(5)); // Saída: 15
 
-            
+
 
             #region Outros Exemplos
 
@@ -177,7 +179,8 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
 
             //Instância de Delegate
             //Lambda expression com várias ações
-            IsYoungerThan aux2 = (s, youngAge) => {
+            IsYoungerThan aux2 = (s, youngAge) =>
+            {
                 Console.WriteLine("Lambda expression com várias ações");
                 return s.Age < youngAge;
             };
@@ -253,6 +256,9 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
             var students = from s in studentList
                            where (s.Age < 20 && s.Age > 12)
                            select s;
+            List<int> lista = new List<int>();
+
+            lista.Count();
 
             //Lambda expression
             List<Student> students1 = studentList.Where(s => (s.Age < 20 && s.Age > 12)).ToList<Student>();
@@ -263,7 +269,8 @@ namespace Aula_15___Expressoes_Lambda_e_LINQ
                             select s.Name;
 
             //Extension Methods
-            var filteredResult = studentList.Where((s, i) => {
+            var filteredResult = studentList.Where((s, i) =>
+            {
                 if (i % 2 == 0) // if even element
                     return true;
                 return false;
