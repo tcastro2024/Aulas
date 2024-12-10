@@ -13,7 +13,7 @@ namespace Aula_20___Revisoes
         public ContaBancaria ContaBancaria { get; set; }
 
         //Atributos/Propridades que não devem ter o método set
-        // private string Id { get;  }
+        public string Id { get;  }
         // private double SaldoBancario { get;  }
 
 
@@ -24,6 +24,13 @@ namespace Aula_20___Revisoes
         }
 
         public Estudante(string nome, ContaBancaria contaBancaria, string id)
+        {
+            this.Nome = nome;
+            this.ContaBancaria = contaBancaria;
+            this.Id = id;
+        }
+
+        public Estudante(string nome, ContaBancaria contaBancaria)
         {
             this.Nome = nome;
             this.ContaBancaria = contaBancaria;
