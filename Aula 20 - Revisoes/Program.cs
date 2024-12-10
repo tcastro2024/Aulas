@@ -10,7 +10,7 @@ namespace Aula_20___Revisoes
     {
         static void Main(string[] args)
         {
-
+           Estudante estudante = new Estudante();
         }
     }
 }
