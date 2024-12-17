@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{34FB2F68-F4AC-4B3A-AD13-2122ABB16AA2}</ProjectGuid>
+    <ProjectGuid>{9BE92F22-7C0D-47CD-8FF8-40F5C62D78C7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aula___8_Execcoes_e_manipulacao_de_ficheiros_externos</RootNamespace>
-    <AssemblyName>Aula - 8 Execcoes e manipulacao de ficheiros externos</AssemblyName>
+    <RootNamespace>Aula_22___Exercicio_3_POO</RootNamespace>
+    <AssemblyName>Aula 22 - Exercicio 3 POO</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoThings.cs" />
+    <Compile Include="Colaborador.cs" />
+    <Compile Include="CustoHora.cs" />
+    <Compile Include="Departamento.cs" />
+    <Compile Include="Entities\Enums\NivelOperario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Varios.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

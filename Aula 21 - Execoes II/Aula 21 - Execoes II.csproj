@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{34FB2F68-F4AC-4B3A-AD13-2122ABB16AA2}</ProjectGuid>
+    <ProjectGuid>{EAA360D1-E580-4562-906F-12B1FFFD48C3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aula___8_Execcoes_e_manipulacao_de_ficheiros_externos</RootNamespace>
-    <AssemblyName>Aula - 8 Execcoes e manipulacao de ficheiros externos</AssemblyName>
+    <RootNamespace>Aula_21___Execoes_II</RootNamespace>
+    <AssemblyName>Aula 21 - Execoes II</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoThings.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\Exceptions\DomainException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Varios.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

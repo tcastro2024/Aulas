@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Aulas_9___Lista_ficheiros_camadas
 {
     /*
-     * Defna uma classe abstrata com os seguintes métodos abstratos:
+     *  Defina uma classe abstrata com os seguintes métodos abstratos:
         double SimulacaoAumento(double percentagem)
         string AvalicaoDeDesempenho(int classifcacao)
      */
