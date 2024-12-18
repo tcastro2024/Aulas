@@ -14,7 +14,7 @@ namespace Aula_23___Correcao_do_Teste
             #region Exercício 4
 
             Farmacia farmacia1 = new Farmacia("FarmaLEIM2425", new Cliente());
-            Farmacia farmacia2 = new Farmacia("FarmaLEIM2425Pro", new Cliente());
+            Farmacia farmacia2 = new Farmacia("AFarmaLEIM2425Pro", new Cliente());
             Farmacia farmacia3 = new Farmacia("FarmaLEIM2425Expert", new Cliente());
 
             List<Farmacia> farmacias = new List<Farmacia>();
@@ -29,7 +29,25 @@ namespace Aula_23___Correcao_do_Teste
                     Console.WriteLine(farmacia.NomeDaEmpresa);
             }
 
+            /*
+             var farmacias = new List<Farmacia>
+                {
+                    new Farmacia("FarmaLEIM2425", new Cliente()),
+                    new Farmacia("AFarmaLEIM2425Pro", new Cliente()),
+                    new Farmacia("FarmaLEIM2425Expert", new Cliente())
+                };
+
+                // Filtra e imprime farmácias cujo nome começa com 'A'
+                foreach (var farmacia in farmacias.Where(f => f.NomeDaEmpresa.StartsWith("A", StringComparison.OrdinalIgnoreCase)))
+                {
+                    Console.WriteLine(farmacia.NomeDaEmpresa);
+                }
+
+             */
+
             #endregion
+
+
 
             #region Exercício 5
             //Validações, Logica de código e  acessos (public, private, ...)

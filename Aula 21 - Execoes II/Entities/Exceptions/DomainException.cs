@@ -10,32 +10,24 @@ namespace Aula_21___Execoes_II.Entities.Exceptions
     class DomainException : ApplicationException
     {
         // Dicionário para mapear códigos a mensagens
-    private static readonly Dictionary<int, string> ErrorMessages = new()
-    {
-        { 1001, "The amount exceeds withdraw limit" },
-        { 1002, "Not enough balance" },
-        { 1003, "Invalid account number" },
-        { 1004, "Account holder name cannot be empty" }
-    };
-
-        /*
-         *     private static readonly Dictionary<string, string> ErrorMessages = new()
-    {
-        { ACCOUNT1001, "The amount exceeds withdraw limit" },
-        { ACCOUNT1002, "Not enough balance" },
-        { ACCOUNT1003, "Invalid account number" },
-        { ACCOUNT1004, "Account holder name cannot be empty" }
-    };
-         */
+        private static readonly Dictionary<int, string> ErrorMessages = new Dictionary<int, string>
+        {
+            { 1001, "The amount exceeds withdraw limit" },
+            { 1002, "Not enough balance" },
+            { 1003, "Invalid account number" },
+            { 1004, "Account holder name cannot be empty" }
+        };
 
         public int Code { get; }
 
-        // Construtor usando apenas mensagem
+        // Construtor usando apenas a mensagem
         public DomainException(string message) : base(message)
         {
         }
 
         // Construtor usando código de erro
+        // Verificar que estamos a receber o método da própria classe 
+        // como parametro
         public DomainException(int code) : base(GetMessageFromCode(code))
         {
             Code = code;
