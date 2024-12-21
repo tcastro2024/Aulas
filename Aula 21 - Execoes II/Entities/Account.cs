@@ -19,11 +19,11 @@ namespace Aula_21___Execoes_II.Entities
         {
             if (number <= 0)
             {
-                throw new DomainException(1003); // Código para número de conta inválido
+                throw new DomainException("1003"); // Código para número de conta inválido
             }
             if (string.IsNullOrWhiteSpace(holder))
             {
-                throw new DomainException(1004); // Código para nome vazio
+                throw new DomainException("1004"); // Código para nome vazio
             }
 
             Number = number;
@@ -41,11 +41,11 @@ namespace Aula_21___Execoes_II.Entities
         {
             if (amount > WithdrawLimit)
             {
-                throw new DomainException(1001); // Código para limite excedido
+                throw new DomainException("1001"); // Código para limite excedido
             }
             if (amount > Balance)
             {
-                throw new DomainException(1002); // Código para saldo insuficiente
+                throw new DomainException("1002"); // Código para saldo insuficiente
             }
 
             Balance -= amount;

@@ -10,35 +10,33 @@ namespace Aula_21___Execoes_II.Entities.Exceptions
     class DomainException : ApplicationException
     {
         // Dicionário para mapear códigos a mensagens
-        private static readonly Dictionary<int, string> ErrorMessages = new Dictionary<int, string>
+        private static readonly Dictionary<string, string> ErrorMessages = new Dictionary<string, string>
         {
-            { 1001, "The amount exceeds withdraw limit" },
-            { 1002, "Not enough balance" },
-            { 1003, "Invalid account number" },
-            { 1004, "Account holder name cannot be empty" }
+            { "1001", "The amount exceeds withdraw limit" },
+            { "1002", "Not enough balance" },
+            { "1003", "Invalid account number" },
+            { "1004", "Account holder name cannot be empty" }
         };
 
-        public int Code { get; }
+        public string Code { get; }
 
         // Construtor usando apenas a mensagem
-        public DomainException(string message) : base(message)
+        public DomainException(string message) : base(GetMessageFromCode(message))
         {
+            message = message;
         }
 
         // Construtor usando código de erro
         // Verificar que estamos a receber o método da própria classe 
         // como parametro
-        public DomainException(int code) : base(GetMessageFromCode(code))
-        {
-            Code = code;
-        }
+
 
         // Método para buscar mensagem pelo código
-        private static string GetMessageFromCode(int code)
+        private static string GetMessageFromCode(string code)
         {
             if (ErrorMessages.TryGetValue(code, out var message))
             {
-                return message;
+                return code + " - " + message;
             }
             return "Unknown error code";
         }

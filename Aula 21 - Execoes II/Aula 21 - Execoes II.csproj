@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\Exceptions\DomainException.cs" />
+    <Compile Include="Entities\Exceptions\DomainExceptionIntCode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

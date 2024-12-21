@@ -51,7 +51,7 @@ namespace Aula_24___Conectar_ao_SSMS
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            Console.WriteLine($" {reader["ID"]}, NomeDoProduto: {reader["NomeProduto"]}");
+                            Console.WriteLine($"ID: {reader["ID"]}, NomeDoProduto: {reader["NomeProduto"]}");
                         }
                     }
                 }
