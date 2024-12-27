@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Aula_26___Ficha_treino_II" Group="Expanded" Label="Aula_26___Ficha_treino_II" Category="CodeSchema_Namespace" />
+    <Node Id="Aula_26___Ficha_treino_II.Empresa" Label="Empresa" Category="CodeSchema_Class" Group="Aula_26___Ficha_treino_II" />
+    <Node Id="Aula_26___Ficha_treino_II.Hospital" Label="Hospital" Category="CodeSchema_Class" Group="Aula_26___Ficha_treino_II" />
+    <Node Id="Aula_26___Ficha_treino_II.IEmpresa" Label="IEmpresa" Category="CodeSchema_Interface" Group="Aula_26___Ficha_treino_II" />
+    <Node Id="Aula_26___Ficha_treino_II.Paciente" Label="Paciente" Category="CodeSchema_Class" Group="Aula_26___Ficha_treino_II" />
+    <Node Id="Aula_26___Ficha_treino_II.Program" Label="Program" Category="CodeSchema_Class" Group="Aula_26___Ficha_treino_II" />
+  </Nodes>
+  <Links>
+    <Link Source="Aula_26___Ficha_treino_II" Target="Aula_26___Ficha_treino_II.Empresa" Category="Contains" />
+    <Link Source="Aula_26___Ficha_treino_II" Target="Aula_26___Ficha_treino_II.Hospital" Category="Contains" />
+    <Link Source="Aula_26___Ficha_treino_II" Target="Aula_26___Ficha_treino_II.IEmpresa" Category="Contains" />
+    <Link Source="Aula_26___Ficha_treino_II" Target="Aula_26___Ficha_treino_II.Paciente" Category="Contains" />
+    <Link Source="Aula_26___Ficha_treino_II" Target="Aula_26___Ficha_treino_II.Program" Category="Contains" />
+    <Link Source="Aula_26___Ficha_treino_II.Hospital" Target="Aula_26___Ficha_treino_II.Empresa" Category="Inherits" />
+    <Link Source="Aula_26___Ficha_treino_II.Hospital" Target="Aula_26___Ficha_treino_II.IEmpresa" Category="Implements" />
+    <Link Source="Aula_26___Ficha_treino_II.Hospital" Target="Aula_26___Ficha_treino_II.Paciente" Category="Aggregates" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" />
+    <Category Id="Inheritance" Background="#FF00FF00" />
+    <Category Id="Implementation" Background="#FFFFFF00" />
+    <Category Id="Composes" Background="#FF008000" />
+    <Category Id="Aggregates" Background="#FFFFA500" />
+    <Category Id="Uses" Background="#FF000000" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Link" GroupLabel="Inherits" ValueLabel="True">
+      <Condition Expression="HasCategory('Inherits')" />
+      <Setter Property="Stroke" Value="#FF000000" />
+      <Setter Property="StrokeThickness" Value="2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True">
+      <Condition Expression="HasCategory('Implements')" />
+      <Setter Property="Stroke" Value="#FF000000" />
+      <Setter Property="StrokeThickness" Value="2" />
+      <Setter Property="StrokeDashArray" Value="4,2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Composes" ValueLabel="True">
+      <Condition Expression="HasCategory('Composes')" />
+      <Setter Property="Stroke" Value="#FFFFA500" />
+      <Setter Property="StrokeThickness" Value="1" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Aggregates" ValueLabel="True">
+      <Condition Expression="HasCategory('Aggregates')" />
+      <Setter Property="Stroke" Value="#FFFFA500" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="StrokeDashArray" Value="2,4" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Uses" ValueLabel="True">
+      <Condition Expression="HasCategory('Uses')" />
+      <Setter Property="Stroke" Value="#FF000000" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="StrokeDashArray" Value="1,2" />
+    </Style>
+  </Styles>
+</DirectedGraph>

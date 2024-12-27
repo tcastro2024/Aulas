@@ -21,6 +21,24 @@ namespace Aula_26___Ficha_treino_II
     {
         static void Main(string[] args)
         {
+            Hospital hospital = new Hospital("Hospital São João", new Paciente());
+            Hospital hospital1 = new Hospital("Hospital Santa Maria", new Paciente());
+            Hospital hospital2 = new Hospital("Hospital Dona Estefánia", new Paciente());
+
+            List<string> hospitais = new List<string>();
+
+            hospitais.Add(hospital.Nome);
+            hospitais.Add(hospital1.Nome);
+            hospitais.Add(hospital2.Nome);
+
+            hospitais.Sort();
+
+            foreach (string nomes in hospitais)
+            {
+                Console.WriteLine(nomes);
+            }
+
+            Console.ReadKey();
         }
     }
 }
